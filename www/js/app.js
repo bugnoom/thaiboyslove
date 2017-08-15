@@ -52,10 +52,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  .state('login',{
+  .state('tab.login',{
     url : "/login",
-    templateUrl: 'templates/login.html',
-    controller: 'LoginCtrl'
+    views:{
+      'tab-login':{
+        templateUrl: 'templates/login.html',
+        controller: 'LoginCtrl'
+      }
+    }
+    
   })
 
   .state('tab.chats', {

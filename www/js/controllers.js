@@ -29,6 +29,10 @@ angular.module('starter.controllers', [])
 
 .controller("LoginCtrl",function($scope,$state){
   $scope.gotoLogin = function(){
-    $state.go('login');
+    $state.go('tab.login');
+  }
+
+  $scope.gotohome = function(){
+    $state.go('tab.dash')
   }
 })

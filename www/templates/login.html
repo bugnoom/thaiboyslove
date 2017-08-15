@@ -1,11 +1,12 @@
 <ion-view view-title="Login">
-    <!--
-      The nav bar that will be updated as we navigate between views.
-    -->
     <ion-nav-bar class="bar-stable bar-positive">
             <ion-nav-back-button></ion-nav-back-button>
-           
-          </ion-nav-bar>
+            <ion-nav-buttons side="right">
+                    <button class="button button-clear" ng-click="gotohome();" ng-controller="LoginCtrl">
+                        Cancel
+                    </button>
+                </ion-nav-buttons>
+     </ion-nav-bar>
     <ion-content>
       
     </ion-content>
