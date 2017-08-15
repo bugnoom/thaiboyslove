@@ -23,6 +23,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 })
 
+
+
 .config(function($stateProvider, $urlRouterProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
@@ -50,6 +52,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  .state('login',{
+    url : "/login",
+    templateUrl: 'templates/login.html',
+    controller: 'LoginCtrl'
+  })
+
   .state('tab.chats', {
       url: '/chats',
       views: {
@@ -64,6 +72,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-chats': {
           templateUrl: 'templates/chat-detail.html',
+          controller: 'ChatDetailCtrl'
+        }
+      }
+    })
+    .state('tab.search', {
+      url: '/search',
+      views: {
+        'tab-search': {
+          templateUrl: 'templates/tab-search.html',
+          controller: 'ChatDetailCtrl'
+        }
+      }
+    })
+    .state('tab.favorite', {
+      url: '/favorite',
+      views: {
+        'tab-favorite': {
+          templateUrl: 'templates/tab-favorite.html',
           controller: 'ChatDetailCtrl'
         }
       }
