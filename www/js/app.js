@@ -52,15 +52,20 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  .state('tab.login',{
+  .state('login',{
     url : "/login",
-    views:{
-      'tab-login':{
-        templateUrl: 'templates/login.html',
-        controller: 'LoginCtrl'
+    templateUrl: 'templates/login.html',
+    controller: 'LoginCtrl'
+  })
+
+  .state('tab.blog', {
+    url: '/dash/blog/:blogID',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/blog-list.html',
+        controller: 'BlogCtrl'
       }
     }
-    
   })
 
   .state('tab.chats', {

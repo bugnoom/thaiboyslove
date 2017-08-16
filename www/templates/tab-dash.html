@@ -1,17 +1,24 @@
 <ion-view view-title="Thaiboyslove">
-  <ion-content class="padding ">
-    <h2>Welcome to Ionic</h2>
-    <p>
-    This is the Ionic starter for tabs-based apps. For other starters and ready-made templates, check out the <a href="http://market.ionic.io/starters" target="_blank">Ionic Market</a>.
-    </p>
-    <p>
-      To edit the content of each tab, edit the corresponding template file in <code>www/templates/</code>. This template is <code>www/templates/tab-dash.html</code>
-    </p>
-    <p>
-    If you need help with your app, join the Ionic Community on the <a href="http://forum.ionicframework.com" target="_blank">Ionic Forum</a>. Make sure to <a href="http://twitter.com/ionicframework" target="_blank">follow us</a> on Twitter to get important updates and announcements for Ionic developers.
-    </p>
-    <p>
-      <b>Psst!</b> - Try <a href="http://view.ionic.io/">Ionic View</a> to easily share and test your app with clients and co-workers.
-    </p>
+  <ion-content>
+   <div class="row">
+     <div class="col-12 text-center padding">
+       <p style="font-weight:bold">ส่งเสด็จสู่สวรรคาลัย  
+        น้อมรำลึกถึงพระมหากรุณาธิคุณและร่วมถวายความอาลัย 
+        พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช  
+        ด้วยเกล้าด้วยกระหม่อม
+        ข้าพระพุทธเจ้า ผู้ดูแลเล้าเป็ด และสมาชิก</p>
+      <p><a href="http://www.thaiboyslove.com/webboard/index.php?PHPSESSID=psqpth7586nv0n4se59h1b7991&topic=57605.0" target="_blank">SENGPED AWARDS 2016[ครั้งที่ 10] ประกาศผลผู้ชนะแล้วนะคะ</a></p>
+      <p><a href="http://www.thaiboyslove.com/webboard/index.php?PHPSESSID=psqpth7586nv0n4se59h1b7991&topic=459.0" target="_blank">ข้อตกลงเล้าเป็ด โปรดอ่านก่อนโพสนิยาย (กฏเล้า)</a></p>
+      </div>
+   </div>
+    <ion-list>
+        <ion-item class="item-thumbnail-left" ng-repeat="row in items" type="item-text-wrap" href="#/tab/dash/blog/{{row.title}}">
+          <img ng-src="{{row.pic}}">
+          <h2>{{row.title}}</h2>
+          <p>{{row.shorttext}}</p>
+          <p style="position:absolute;bottom:1em;"><small>ผู้ดูแล: {{row.creadit}}</small></p>
+        </ion-item>
+        
+    </ion-list>
   </ion-content>
 </ion-view>
