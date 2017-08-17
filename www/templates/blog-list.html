@@ -1,20 +1,27 @@
 <ion-view view-title="{{blogtitle}}">
-        <ion-nav-bar class="bar-stable bar-positive">
-                <ion-nav-back-button></ion-nav-back-button>
-                <ion-nav-buttons side="right">
-                        <button class="button button-clear ion-ios-plus-outline">
+  <ion-nav-bar class="bar-stable bar-positive">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="right">
+      <button class="button button-clear ion-ios-plus-outline">
                             ตั้งกระทู้
                         </button>
-                    </ion-nav-buttons>
-         </ion-nav-bar>
+    </ion-nav-buttons>
+  </ion-nav-bar>
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar " ng-repeat="blog in blogs" type="item-text-wrap" href="#/tab/chats/{{blog.id}}">
+      <ion-item>
+        <label class="item item-input">
+              <i class="icon ion-search placeholder-icon"></i>
+              <input type="text" ng-model="input.filterUser" placeholder="Search">
+            </label>
+      </ion-item>
+      <ion-item class="item-remove-animate item-avatar " ng-repeat="blog in blogs | filter:input.filterUser" type="item-text-wrap"
+        href="#/tab/chats/{{blog.id}}">
         <img ng-src="{{blog.face}}">
         <h2>{{blog.name}}</h2>
         <p>{{blog.lastText}}</p>
         <p><small><i class="icon ion-eye"></i>100</small> <small><i class="icon ion-android-chat"></i> 50</small></p>
-        
+
 
         <ion-option-button class="button-assertive" ng-click="remove(blog)">
           Delete

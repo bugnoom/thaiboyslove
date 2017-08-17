@@ -53,7 +53,7 @@ $scope.gotoblog = function(blogID){
   //
   //$scope.$on('$ionicView.enter', function(e) {
   //});
-
+  $scope.input = {};
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {
     Chats.remove(chat);
@@ -65,6 +65,7 @@ $scope.gotoblog = function(blogID){
 })
 
 .controller('AccountCtrl', function($scope, $stateParams, Chats) {
+  $scope.input = {};
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {
     Chats.remove(chat);
@@ -82,6 +83,7 @@ $scope.gotoblog = function(blogID){
 })
 
 .controller("BlogCtrl",function($scope,$state,blog,$stateParams){
+  $scope.input = {};
   $scope.blogs = blog.all();
   $scope.blogtitle = $stateParams.blogID;
   $scope.remove = function(blog) {
