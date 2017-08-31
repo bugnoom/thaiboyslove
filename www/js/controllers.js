@@ -85,8 +85,12 @@ $scope.gotoblog = function(blogID){
 .controller("BlogCtrl",function($scope,$state,blog,$stateParams){
   $scope.input = {};
   $scope.blogs = blog.all();
-  $scope.blogtitle = $stateParams.blogID;
+  $scope.blogtitle = $stateParams.blogtitle;
   $scope.remove = function(blog) {
     blogs.remove(blog);
   };
+
+  $scope.godetail = function(id){
+    $state.go('tab.blogdetail',{chatId:id})
+  }
 })

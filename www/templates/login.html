@@ -1,14 +1,30 @@
 <ion-view view-title="Login">
     <ion-nav-bar class="bar-stable bar-positive">
-            <ion-nav-back-button></ion-nav-back-button>
-            <ion-nav-buttons side="right">
-                    <button class="button button-clear" ng-click="gotohome();" ng-controller="LoginCtrl">
+        <ion-nav-back-button></ion-nav-back-button>
+        <ion-nav-buttons side="right">
+            <button class="button button-clear" ng-click="gotohome();" ng-controller="LoginCtrl">
                         Cancel
                     </button>
-                </ion-nav-buttons>
-     </ion-nav-bar>
-    <ion-content>
-      
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content style="padding:10px;">
+        <p>&nbsp;</p>
+        <p style="text-align:center"><img src="http://www.thaiboyslove.com/webboard/pic/logo.gif"></p>
+        <form>
+            <div class="list">
+                <label class="item item-input">
+                      <span class="input-label">Username</span>
+                      <input type="text">
+                    </label>
+                <label class="item item-input">
+                      <span class="input-label">Password</span>
+                      <input type="password">
+                    </label>
+            </div>
+            <ion-checkbox ng-model="filter.red" style="border:0px;">Remember me</ion-checkbox>
+            <button class="button button-block button-positive">
+                       LOGIN
+                      </button>
+        </form>
     </ion-content>
-  </ion-view>
-  
+</ion-view>

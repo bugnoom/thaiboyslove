@@ -15,7 +15,7 @@
                   <input type="text" ng-model="input.filterUser" placeholder="Search">
                 </label>
           </ion-item>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats  | filter:input.filterUser" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats  | filter:input.filterUser" type="item-text-wrap" href="#/tab/chats/chats-detail/{{chat.id}}">
         <img ng-src="{{chat.face}}">
         <h2>{{chat.name}}</h2>
         <p>{{chat.lastText}}</p>

@@ -41,7 +41,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
   // Each tab has its own nav history stack:
-
   .state('tab.dash', {
     url: '/dash',
     views: {
@@ -59,11 +58,20 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
   .state('tab.blog', {
-    url: '/dash/blog/:blogID',
-    views: {
-      'tab-dash': {
-        templateUrl: 'templates/blog-list.html',
+    url: '/dash/blog/:blogtitle/:blogId',
+    views:{
+        'tab-dash': { templateUrl: 'templates/blog-list.html',
         controller: 'BlogCtrl'
+      }
+    }      
+  })
+
+  .state('tab.blogdetail',{
+    url:'/dash/blog/detail/:chatId',
+    views:{
+      'tab-dash':{
+        templateUrl:'templates/chat-detail.html',
+        controller:'ChatDetailCtrl'
       }
     }
   })
@@ -78,7 +86,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
     .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+      url: '/chats/chats-detail/:chatId',
       views: {
         'tab-chats': {
           templateUrl: 'templates/chat-detail.html',
@@ -86,6 +94,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+
     .state('tab.search', {
       url: '/search',
       views: {
@@ -111,6 +120,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       'tab-account': {
         templateUrl: 'templates/tab-account.html',
         controller: 'AccountCtrl'
+      }
+    }
+  })
+  
+  .state('tab.account-detail',{
+    url: '/account/detail/:chatId',
+    views: {
+      'tab-account': {
+        templateUrl: 'templates/chat-detail.html',
+        controller: 'ChatDetailCtrl'
       }
     }
   });

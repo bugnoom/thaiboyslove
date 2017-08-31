@@ -12,7 +12,7 @@
       </div>
    </div>
     <ion-list>
-        <ion-item class="item-thumbnail-left" ng-repeat="row in items" type="item-text-wrap" href="#/tab/dash/blog/{{row.title}}">
+        <ion-item class="item-thumbnail-left" ng-repeat="row in items" type="item-text-wrap" href="#/tab/dash/blog/{{row.title}}/{{row.id}}">
           <img ng-src="{{row.pic}}">
           <h2>{{row.title}}</h2>
           <p>{{row.shorttext}}</p>
