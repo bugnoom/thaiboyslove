@@ -1,21 +1,22 @@
 <ion-view view-title="กระทู้ล่าสุด">
-    <ion-nav-bar class="bar-stable bar-positive">
-        <ion-nav-back-button></ion-nav-back-button>
-        <ion-nav-buttons side="right">
-                <button class="button button-clear ion-ios-plus-outline">
+  <ion-nav-bar class="bar-stable bar-positive">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="right">
+      <button class="button button-clear ion-ios-plus-outline">
                     ตั้งกระทู้
                 </button>
-            </ion-nav-buttons>
- </ion-nav-bar>
+    </ion-nav-buttons>
+  </ion-nav-bar>
   <ion-content>
     <ion-list>
-        <ion-item>
-            <label class="item item-input">
+      <ion-item>
+        <label class="item item-input">
                   <i class="icon ion-search placeholder-icon"></i>
                   <input type="text" ng-model="input.filterUser" placeholder="Search">
                 </label>
-          </ion-item>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats  | filter:input.filterUser" type="item-text-wrap" href="#/tab/account/detail/{{chat.id}}">
+      </ion-item>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats  | filter:input.filterUser" type="item-text-wrap"
+        href="#/tab/account/detail/{{chat.id}}">
         <img ng-src="{{chat.face}}">
         <h2>{{chat.name}}</h2>
         <p>{{chat.lastText}}</p>

@@ -25,8 +25,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 
 
-  .config(function ($stateProvider, $urlRouterProvider) {
-
+  .config(function ($ionicConfigProvider,$stateProvider, $urlRouterProvider) {
+    $ionicConfigProvider.tabs.position('bottom');
     // Ionic uses AngularUI Router which uses the concept of states
     // Learn more here: https://github.com/angular-ui/ui-router
     // Set up the various states which the app can be in.
@@ -120,7 +120,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         views: {
           'tab-favorite': {
             templateUrl: 'templates/tab-favorite.html',
-            controller: 'ChatDetailCtrl'
+            controller: 'FavCtrl'
           }
         }
       })
@@ -129,7 +129,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         views: {
           'tab-favorite': {
             templateUrl: 'templates/chat-detail.html',
-            controller: 'ChatDetailCtrl'
+            controller: 'FavCtrl'
           }
         }
       })
@@ -149,10 +149,21 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         views: {
           'tab-account': {
             templateUrl: 'templates/chat-detail.html',
-            controller: 'ChatDetailCtrl'
+            controller: 'AccountCtrl'
+          }
+        }
+      })
+
+      .state('tab.account-comment', {
+        url: '/account/comment/:chatId',
+        views: {
+          'tab-account': {
+            templateUrl: 'templates/comment.html',
+            controller: 'AccountCtrl'
           }
         }
       });
+
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/tab/dash');

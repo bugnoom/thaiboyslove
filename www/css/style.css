@@ -1,2 +1,5 @@
 /* Empty. Add your own CSS if you like */
 .myBg{background-color: #387ef5;}
+.hasFooter{
+    margin-bottom: 44px !important;
+  }

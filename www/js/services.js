@@ -130,4 +130,38 @@ angular.module('starter.services', [])
         return null;
       }
     };
+  })
+
+  .factory('fav', function () {
+    // Might use a resource here that returns a JSON array
+
+    // Some fake testing data
+    var favs = [{
+      id: 0,
+      name: 'รวบรวมคำคมดีๆเด็ดๆบาดๆใจจากนิยายในเล้ากันครับ',
+      lastText: 'You on your way?',
+      face: 'http://www.thaiboyslove.com/webboard/Themes/default/images/topic/normal_post_sticky.gif'
+    }, {
+      id: 1,
+      name: 'Tips การใช้งานเล็กๆน้อยๆในเล้า (17/1/56)',
+      lastText: 'Hey, it\'s me',
+      face: 'http://www.thaiboyslove.com/webboard/Themes/default/images/topic/normal_post_sticky.gif'
+    }];
+
+    return {
+      all: function () {
+        return favs;
+      },
+      remove: function (fav) {
+        favs.splice(favs.indexOf(favs), 1);
+      },
+      get: function (id) {
+        for (var i = 0; i < favs.length; i++) {
+          if (favs[i].id === parseInt(id)) {
+            return favs[i];
+          }
+        }
+        return null;
+      }
+    };
   });

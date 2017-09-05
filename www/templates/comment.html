@@ -1,19 +1,57 @@
 <ion-view view-title="{{chat.name}}">
-        <ion-nav-bar class="bar-stable bar-positive">
-            <ion-nav-back-button></ion-nav-back-button>
-            
-     </ion-nav-bar>
-      <ion-content class="padding">
-            <div class="card">
-                    <div class="item item-divider">
-                      I'm a Header in a Card!
-                    </div>
-                    <div class="item item-text-wrap">
-                      This is a basic Card with some text.
-                    </div>
-                    <div class="item item-divider">
-                      I'm a Footer in a Card!
-                    </div>
-                  </div>
-      </ion-content>
-    </ion-view>
+    <ion-nav-bar class="bar-stable bar-positive">
+        <ion-nav-back-button></ion-nav-back-button>
+        <ion-nav-buttons side="right">
+          <button class="button button-clear">
+                        ตอบกระทู้
+                    </button>
+        </ion-nav-buttons>
+      </ion-nav-bar>
+  <ion-content class="padding has-footer">
+    <div class="list card">
+      <div class="item item-avatar">
+        <img ng-src="https://ionicframework.com/img/docs/venkman.jpg">
+        <h2> Username </h2>
+        <p class="subdued">เมื่อ 11-03-2016 13:02:46</p>
+      </div>
+
+      <div class="item item-body">
+        <p>
+          comment1
+        </p>
+      </div>
+    </div>
+
+    <div class="list card">
+        <div class="item item-avatar">
+          <img ng-src="https://ionicframework.com/img/docs/venkman.jpg">
+          <h2> Username </h2>
+          <p class="subdued">เมื่อ 11-03-2016 13:02:46</p>
+        </div>
+  
+        <div class="item item-body">
+          <p>
+            comment1
+          </p>
+        </div>
+      </div>
+
+      <div class="list card">
+          <div class="item item-avatar">
+            <img ng-src="https://ionicframework.com/img/docs/venkman.jpg">
+            <h2> Username </h2>
+            <p class="subdued">เมื่อ 11-03-2016 13:02:46</p>
+          </div>
+    
+          <div class="item item-body">
+            <p>
+              comment1
+            </p>
+          </div>
+        </div>
+
+  </ion-content>
+  <ion-footer-bar class="row-no-padding">
+     
+  </ion-footer-bar>
+</ion-view>
